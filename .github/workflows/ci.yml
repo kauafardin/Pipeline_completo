@@ -26,6 +26,8 @@ jobs:
 
       - name: Rodar testes
         run: pytest -q --junitxml=pytest.xml
+        env:
+          PYTHONPATH: .
 
       - name: Publicar relatório de testes
         if: always()
